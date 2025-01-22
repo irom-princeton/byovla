@@ -1445,9 +1445,7 @@ if __name__ == "__main__":
             droll = actions[5]
             dgrasp = actions[6]
 
-            bot.arm.set_ee_cartesian_trajectory(
-                x=dx, y=dy, z=dz, roll=droll, pitch=dpitch, yaw=dyaw
-            )
+            bot.act(dx, dy, dz, droll, dpitch, dyaw, dgrasp) # set your robot controller here
 
             epsilon = 0.7
             if dgrasp >= epsilon:
